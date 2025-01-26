@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:trackit/widgets/chart/chart.dart';
 import 'package:trackit/widgets/expenses_list/expenses_list.dart';
 import 'package:trackit/models/expense.dart';
 import 'package:trackit/widgets/new_expense.dart';
@@ -85,7 +86,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          Text('The chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           )
