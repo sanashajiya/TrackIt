@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:trackit/widgets/chart/chart.dart';
 import 'package:trackit/widgets/expenses_list/expenses_list.dart';
@@ -31,6 +29,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      // useSafeArea: true,
       isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(
@@ -69,7 +68,6 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     Widget mainContent = Center(
       child: Text('No expenses found. Start adding some!'),
     );
